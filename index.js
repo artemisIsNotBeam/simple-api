@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const PORT = 8080;
 
-
 let database = {
     "control": {
         wins: 0,
@@ -17,10 +16,8 @@ let database = {
         losses: 0
     }
 }
-// put is update
-// get is read
-// posts is create
-// delete is delete
+// put is update | get is read
+// posts is create | delete is delete
 app.put('/lose/:type', (req, res)=>{
     let type = req.params.type;
     if (type == "control" || type =="aggro" || type == "combo"){
