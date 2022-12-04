@@ -77,7 +77,4 @@ app.delete('/',(req,res)=>{
 // then fill out the end with what you want to do and select get/put/delete
 // eg: get http://localhost:8080/database/lose
 
-app.listen(
-    PORT,
-    () =>console.log("running at http://localhost:"+PORT)
-)
+app.listen(process.env.PORT || PORT);
